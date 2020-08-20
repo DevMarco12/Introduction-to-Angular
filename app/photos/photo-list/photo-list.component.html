@@ -1,0 +1,5 @@
+<h1 style="background: red" apDarkenOnHover brightness="5%">Album</h1>
+<ap-search (onTyping)="filter = $event" [value]="filter"></ap-search>
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
+
+<ap-loadbutton (click)="load()" [hasMore] ="hasMore"></ap-loadbutton>
